@@ -6,7 +6,11 @@ class Contact {
 
   //Get contacts static we don't have to instantiate
   static getContacts(){
-
+    this.makeRequest('GET', 'http://jsonplaceholder.typicode.com/users').then(function(data){
+      console.log(data);
+    }).catch(function(err){
+      console.log(err);
+    })
   }
 
   //Save contact
